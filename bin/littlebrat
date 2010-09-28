@@ -1,0 +1,7 @@
+require 'littlebrat'
+
+# TODO: Grab the config values from the arguments
+
+# Time to shut the little brats up!
+# LittleBrat.new(800, 600, false).show
+LittleBrat.new.show
