@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'littlebrat'
 
 # TODO: Grab the config values from the arguments
