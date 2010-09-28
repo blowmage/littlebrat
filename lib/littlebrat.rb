@@ -16,24 +16,8 @@ class LittleBrat < Gosu::Window
   end
 
   def load_beeps
-    %w{ AMFMBEEP.WAV
-        ARRP.WAV
-        BADUMM.WAV
-        BEEPCASI.WAV
-        BEEPCOME.WAV
-        BEEPDOUB.WAV
-        BEEPMETA.WAV
-        BEEPMULT.WAV
-        BEEPPURE.WAV
-        BEEPROBO.WAV
-        BEEP_FM.WAV
-        KLICK.WAV
-        TEESWING.WAV
-        TYPEKEY.WAV
-        TYPESPAC.WAV
-        WATER.WAV
-    }.map do |f|
-      Gosu::Sample.new(self, "sounds/#{f}")
+    Dir.glob(File.dirname(__FILE__) + '/../sounds/**/*.WAV').map do |beep|
+      Gosu::Sample.new(self, beep)
     end
   end
 
@@ -67,7 +51,6 @@ class LittleBrat < Gosu::Window
 
   def str_from_button_id id
     self.button_id_to_char(id) || random_letter
-    # random_letter
   end
 
   def random_letter

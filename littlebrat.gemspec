@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.add_dependency(%q<gosu>, ["~> 0.7.24"])
   s.rubyforge_project         = "littlebrat"
 
-  s.files        = Dir.glob 'lib/**/*.rb'
+  s.files        = Dir.glob('lib/**/*.rb') + Dir.glob('sounds/**/*.WAV')
   s.executables  = ['littlebrat']
   s.require_path = 'lib'
 end
