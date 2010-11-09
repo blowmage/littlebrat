@@ -50,7 +50,8 @@ class LittleBrat < Gosu::Window
   end
 
   def str_from_button_id id
-    self.button_id_to_char(id) || random_letter
+    c = self.button_id_to_char(id).to_s.strip
+    c.empty? ? random_letter : c
   end
 
   def random_letter
