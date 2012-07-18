@@ -1,9 +1,59 @@
 #!/usr/bin/env ruby
 
 require 'littlebrat'
+require 'optparse'
 
-# TODO: Grab the config values from the arguments
+# This hash will hold all of the options
+# parsed from the command-line by
+# OptionParser.
+options = { }
+
+optparse = OptionParser.new do |opts|
+  # Set a banner, displayed at the top
+  # of the help screen.
+  opts.banner = "Usage: littlebrat [options]"
+
+  options[:height] = Gosu.screen_height - 200
+  opts.on( '--height NUM', 'Height of the screen' ) do |height|
+    options[:height] = Integer(height)
+  end
+
+  options[:width] = Gosu.screen_width - 200
+  opts.on( '--width NUM', 'Width of the screen' ) do |width|
+    options[:width] = Integer(width)
+  end
+
+  # options[:height] = Gosu.screen_height - 200
+  # opts.on( '-h', '--height NUM', 'Height of the screen' ) do |height|
+  #   height = height.to_i
+  #   options[:height] = height if height > 0
+  # end
+
+  # options[:width] = Gosu.screen_width - 200
+  # opts.on( '-w', '--width NUM', 'Width of the screen' ) do |width|
+  #   width = width.to_i
+  #   options[:width] = width if widt > 0
+  # end
+
+  options[:fullscreen] = false
+  opts.on( '--fullscreen', 'Open in full screen mode' ) do
+    options[:fullscreen] = true
+  end
+
+  # This displays the help screen, all programs are
+  # assumed to have this option.
+  opts.on( '-h', '--help', 'Display this screen' ) do
+    puts opts
+    exit
+  end
+end
+
+ # Parse the command-line. Remember there are two forms
+ # of the parse method. The 'parse' method simply parses
+ # ARGV, while the 'parse!' method parses ARGV and removes
+ # any options found there, as well as any parameters for
+ # the options. What's left is the list of files to resize.
+ optparse.parse!
 
 # Time to shut the little brats up!
-# LittleBrat.new(800, 600, false).show
-LittleBrat.new.show
+LittleBrat.new(options[:width], options[:height], options[:fullscreen]).show
