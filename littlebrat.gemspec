@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   s.name        = "littlebrat"
-  s.version     = '0.1.2'
+  s.version     = '0.1.3'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Mike Moore']
   s.email       = ['mike@blowmage.com']

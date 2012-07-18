@@ -1,13 +1,17 @@
 require 'rake'
 require 'rake/clean'
 
-require 'rake/gempackagetask'
+require 'rubygems'
+require 'rubygems/package_task'
+
 gemspec = eval(File.read('littlebrat.gemspec'))
-Rake::GemPackageTask.new(gemspec) do |p|
-  p.gem_spec = gemspec
+
+Gem::PackageTask.new(gemspec) do |pkg|
+  # pkg.need_zip = true
+  # pkg.need_tar = true
 end
 
-require 'rake/rdoctask'
+require 'rdoc/task'
 rd = Rake::RDocTask.new("rdoc") do |rdoc|
   rdoc.title = "#{gemspec.name} (#{gemspec.version}) - #{gemspec.description}"
   rdoc.options << '--line-numbers --inline-source --main README'
@@ -37,4 +41,4 @@ rescue LoadError
   end
 end
 
-task :test => :check_dependencies
+# task :test => :check_dependencies
