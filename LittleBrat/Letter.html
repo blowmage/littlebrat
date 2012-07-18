@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: LittleBrat::Letter</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/littlebrat_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/littlebrat.rb">lib/littlebrat.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-draw">#draw</a></li>
+          
+          <li><a href="#method-i-random_byte">#random_byte</a></li>
+          
+          <li><a href="#method-i-random_color">#random_color</a></li>
+          
+          <li><a href="#method-i-random_position">#random_position</a></li>
+          
+          <li><a href="#method-i-random_text_size">#random_text_size</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../LittleBrat.html">LittleBrat</a></li>
+        
+          <li><a href="../LittleBrat/Instructions.html">LittleBrat::Instructions</a></li>
+        
+          <li><a href="../LittleBrat/Letter.html">LittleBrat::Letter</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">LittleBrat::Letter</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(window, text)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">window</span>, <span class="ruby-identifier">text</span>
+  <span class="ruby-identifier">text_height</span> = <span class="ruby-identifier">random_text_size</span> <span class="ruby-identifier">window</span>
+  <span class="ruby-ivar">@image</span>      = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">from_text</span> <span class="ruby-identifier">window</span>, <span class="ruby-identifier">text</span>,
+                                      <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-identifier">default_font_name</span>,
+                                      <span class="ruby-identifier">text_height</span>
+  <span class="ruby-ivar">@color</span>      = <span class="ruby-identifier">random_color</span> <span class="ruby-comment"># Image text is white, so this is to modulate it</span>
+  <span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>      = <span class="ruby-identifier">random_position</span> <span class="ruby-identifier">window</span>, <span class="ruby-identifier">text_height</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="draw-method" class="method-detail ">
+          <a name="method-i-draw"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="draw-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 99</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw</span>
+  <span class="ruby-ivar">@image</span>.<span class="ruby-identifier">draw</span> <span class="ruby-ivar">@x</span>, <span class="ruby-ivar">@y</span>, <span class="ruby-value">1</span>, <span class="ruby-value">0.5</span>, <span class="ruby-value">0.5</span>, <span class="ruby-ivar">@color</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw-method -->
+
+      
+        <div id="random_byte-method" class="method-detail ">
+          <a name="method-i-random_byte"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">random_byte</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="random_byte-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 115</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">random_byte</span>
+  <span class="ruby-identifier">rand</span>(<span class="ruby-value">255</span> <span class="ruby-operator">-</span> <span class="ruby-value">40</span>) <span class="ruby-operator">+</span> <span class="ruby-value">40</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- random_byte-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- random_byte-method -->
+
+      
+        <div id="random_color-method" class="method-detail ">
+          <a name="method-i-random_color"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">random_color</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="random_color-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">random_color</span>
+  <span class="ruby-identifier">color</span>       = <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">0xff000000</span>
+  <span class="ruby-identifier">color</span>.<span class="ruby-identifier">red</span>   = <span class="ruby-identifier">random_byte</span>
+  <span class="ruby-identifier">color</span>.<span class="ruby-identifier">green</span> = <span class="ruby-identifier">random_byte</span>
+  <span class="ruby-identifier">color</span>.<span class="ruby-identifier">blue</span>  = <span class="ruby-identifier">random_byte</span>
+  <span class="ruby-identifier">color</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- random_color-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- random_color-method -->
+
+      
+        <div id="random_position-method" class="method-detail ">
+          <a name="method-i-random_position"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">random_position</span><span
+              class="method-args">(window, text_height)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="random_position-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">random_position</span> <span class="ruby-identifier">window</span>, <span class="ruby-identifier">text_height</span>
+  [ <span class="ruby-identifier">rand</span> * <span class="ruby-identifier">window</span>.<span class="ruby-identifier">width</span>  <span class="ruby-operator">-</span> (<span class="ruby-identifier">text_height</span> <span class="ruby-operator">/</span> <span class="ruby-value">4</span>),
+    <span class="ruby-identifier">rand</span> * <span class="ruby-identifier">window</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">text_height</span> <span class="ruby-operator">/</span> <span class="ruby-value">4</span>) ]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- random_position-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- random_position-method -->
+
+      
+        <div id="random_text_size-method" class="method-detail ">
+          <a name="method-i-random_text_size"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">random_text_size</span><span
+              class="method-args">(window)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="random_text_size-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">random_text_size</span>(<span class="ruby-identifier">window</span>)
+  (<span class="ruby-identifier">window</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">rand</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>)).<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- random_text_size-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- random_text_size-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

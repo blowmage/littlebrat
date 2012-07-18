@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: LittleBrat</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/littlebrat_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/littlebrat.rb">lib/littlebrat.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Gosu::Window</p>
+        
+      </div>
+      
+
+      
+
+      
+      <!-- Namespace Contents -->
+      <div id="namespace-list-section" class="section">
+        <h3 class="section-header">Namespace</h3>
+        <ul class="link-list">
+          
+          <li><span class="type">CLASS</span> <a href="LittleBrat/Instructions.html">LittleBrat::Instructions</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="LittleBrat/Letter.html">LittleBrat::Letter</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-beep">#beep</a></li>
+          
+          <li><a href="#method-i-button_down">#button_down</a></li>
+          
+          <li><a href="#method-i-close-3F">#close?</a></li>
+          
+          <li><a href="#method-i-draw">#draw</a></li>
+          
+          <li><a href="#method-i-load_beeps">#load_beeps</a></li>
+          
+          <li><a href="#method-i-needs_cursor-3F">#needs_cursor?</a></li>
+          
+          <li><a href="#method-i-needs_redraw-3F">#needs_redraw?</a></li>
+          
+          <li><a href="#method-i-random_letter">#random_letter</a></li>
+          
+          <li><a href="#method-i-str_from_button_id">#str_from_button_id</a></li>
+          
+          <li><a href="#method-i-update">#update</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./LittleBrat.html">LittleBrat</a></li>
+        
+          <li><a href="./LittleBrat/Instructions.html">LittleBrat::Instructions</a></li>
+        
+          <li><a href="./LittleBrat/Letter.html">LittleBrat::Letter</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">LittleBrat</h1>
+
+    <div id="description" class="description">
+      
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="LETTER_LIMIT">LETTER_LIMIT</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(width=Gosu.screen_width, height=Gosu.screen_height, fullscreen=true)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">width</span>=<span class="ruby-constant">Gosu</span>.<span class="ruby-identifier">screen_width</span>, <span class="ruby-identifier">height</span>=<span class="ruby-constant">Gosu</span>.<span class="ruby-identifier">screen_height</span>, <span class="ruby-identifier">fullscreen</span>=<span class="ruby-keyword">true</span>
+  <span class="ruby-comment"># Full resolution, fullscreen</span>
+  <span class="ruby-keyword">super</span> <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-identifier">fullscreen</span> <span class="ruby-comment">#force to boolean for Gosu</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">caption</span> = <span class="ruby-string">&quot;Leave me alone you little brat!&quot;</span>
+  <span class="ruby-comment"># The letters the little brat hits on the keyboard</span>
+  <span class="ruby-ivar">@letters</span>, <span class="ruby-ivar">@new_letters</span> = [], []
+  <span class="ruby-comment"># Load up the instructions to show at first</span>
+  <span class="ruby-ivar">@letters</span>.<span class="ruby-identifier">push</span> <span class="ruby-constant">Instructions</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>)
+  <span class="ruby-ivar">@beeps</span> = <span class="ruby-identifier">load_beeps</span>
+  <span class="ruby-ivar">@redraw</span> = <span class="ruby-keyword">true</span> <span class="ruby-comment"># init this because it needs to be true or false</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="beep-method" class="method-detail ">
+          <a name="method-i-beep"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">beep</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="beep-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">beep</span>
+  <span class="ruby-ivar">@beeps</span>[<span class="ruby-identifier">rand</span> <span class="ruby-ivar">@beeps</span>.<span class="ruby-identifier">size</span>].<span class="ruby-identifier">play</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- beep-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- beep-method -->
+
+      
+        <div id="button_down-method" class="method-detail ">
+          <a name="method-i-button_down"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">button_down</span><span
+              class="method-args">(id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="button_down-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">button_down</span> <span class="ruby-identifier">id</span> <span class="ruby-comment"># Callback, not on main thread</span>
+  <span class="ruby-identifier">close</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">close?</span> <span class="ruby-comment"># Close if we press the right keys</span>
+  <span class="ruby-ivar">@new_letters</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">str_from_button_id</span>(<span class="ruby-identifier">id</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- button_down-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- button_down-method -->
+
+      
+        <div id="close-3F-method" class="method-detail ">
+          <a name="method-i-close-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">close?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="close-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close?</span>
+  (<span class="ruby-identifier">button_down?</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbEscape</span>        <span class="ruby-keyword">or</span>
+   <span class="ruby-identifier">button_down?</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbLeftControl</span>   <span class="ruby-keyword">or</span>
+   <span class="ruby-identifier">button_down?</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbRightControl</span>) <span class="ruby-operator">&amp;&amp;</span>
+  (<span class="ruby-identifier">button_down?</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbQ</span>         <span class="ruby-keyword">or</span> <span class="ruby-identifier">button_down?</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbW</span> <span class="ruby-keyword">or</span>
+   <span class="ruby-identifier">button_down?</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbZ</span>         <span class="ruby-keyword">or</span> <span class="ruby-identifier">button_down?</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbC</span> <span class="ruby-keyword">or</span>
+   <span class="ruby-identifier">button_down?</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbBackspace</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">button_down?</span> <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">KbDelete</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- close-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- close-3F-method -->
+
+      
+        <div id="draw-method" class="method-detail ">
+          <a name="method-i-draw"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">draw</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="draw-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">draw</span>
+  <span class="ruby-ivar">@letters</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">letter</span><span class="ruby-operator">|</span> <span class="ruby-identifier">letter</span>.<span class="ruby-identifier">draw</span> }
+  <span class="ruby-ivar">@redraw</span> = <span class="ruby-keyword">false</span> <span class="ruby-comment"># Done drawing, don't need to draw no more</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- draw-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- draw-method -->
+
+      
+        <div id="load_beeps-method" class="method-detail ">
+          <a name="method-i-load_beeps"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">load_beeps</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="load_beeps-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">load_beeps</span>
+  <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword">__FILE__</span>) <span class="ruby-operator">+</span> <span class="ruby-string">'/../sounds/**/*.WAV'</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">beep</span><span class="ruby-operator">|</span>
+    <span class="ruby-constant">Gosu</span><span class="ruby-operator">::</span><span class="ruby-constant">Sample</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">beep</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- load_beeps-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- load_beeps-method -->
+
+      
+        <div id="needs_cursor-3F-method" class="method-detail ">
+          <a name="method-i-needs_cursor-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">needs_cursor?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="needs_cursor-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">needs_cursor?</span>; <span class="ruby-keyword">false</span>;   <span class="ruby-keyword">end</span></pre>
+            </div><!-- needs_cursor-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- needs_cursor-3F-method -->
+
+      
+        <div id="needs_redraw-3F-method" class="method-detail ">
+          <a name="method-i-needs_redraw-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">needs_redraw?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="needs_redraw-3F-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">needs_redraw?</span>; <span class="ruby-ivar">@redraw</span>; <span class="ruby-keyword">end</span></pre>
+            </div><!-- needs_redraw-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- needs_redraw-3F-method -->
+
+      
+        <div id="random_letter-method" class="method-detail ">
+          <a name="method-i-random_letter"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">random_letter</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="random_letter-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">random_letter</span>
+  <span class="ruby-ivar">@random_letters</span> <span class="ruby-operator">||=</span> <span class="ruby-node">%{ ▲ ▼ ☻ ♠ ♣ ♥ ♦ ☀ ☁ ☂ ✔ ✘ ☎ ✈ ✪ }</span>
+  <span class="ruby-ivar">@random_letters</span>[<span class="ruby-identifier">rand</span> <span class="ruby-ivar">@random_letters</span>.<span class="ruby-identifier">size</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- random_letter-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- random_letter-method -->
+
+      
+        <div id="str_from_button_id-method" class="method-detail ">
+          <a name="method-i-str_from_button_id"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">str_from_button_id</span><span
+              class="method-args">(id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="str_from_button_id-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 51</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">str_from_button_id</span> <span class="ruby-identifier">id</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">button_id_to_char</span>(<span class="ruby-identifier">id</span>).<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">random_letter</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- str_from_button_id-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- str_from_button_id-method -->
+
+      
+        <div id="update-method" class="method-detail ">
+          <a name="method-i-update"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">update</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            
+            
+
+            
+            <div class="method-source-code" id="update-source">
+<pre>
+<span class="ruby-comment"># File lib/littlebrat.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@new_letters</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-comment"># Add new letter to the queue</span>
+    <span class="ruby-keyword">while</span> <span class="ruby-identifier">str</span> = <span class="ruby-ivar">@new_letters</span>.<span class="ruby-identifier">shift</span>
+      <span class="ruby-ivar">@letters</span>.<span class="ruby-identifier">push</span>(<span class="ruby-constant">Letter</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword">self</span>, <span class="ruby-identifier">str</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">beep</span> <span class="ruby-comment"># Only beep once per game loop</span>
+    <span class="ruby-comment"># Keep the total number of letter sprites at a managable number</span>
+    <span class="ruby-ivar">@letters</span> = <span class="ruby-ivar">@letters</span>[<span class="ruby-operator">-</span><span class="ruby-constant">LETTER_LIMIT</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>] <span class="ruby-keyword">if</span> <span class="ruby-ivar">@letters</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">LETTER_LIMIT</span>
+    <span class="ruby-comment"># We updated the letters, so we need to redraw</span>
+    <span class="ruby-ivar">@redraw</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- update-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- update-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
